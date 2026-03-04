@@ -8,21 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */; };
-		412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412385BC2059C9F900A66A8F /* CreditsViewController.swift */; };
 		413F4792205AF8A30075501F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F4791205AF8A30075501F /* TableViewController.swift */; };
 		41ACFF7320923A8000C1B055 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF7220923A8000C1B055 /* ExploreTableViewCell.swift */; };
 		41ACFF75209241DE00C1B055 /* PExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF74209241DE00C1B055 /* PExploreTableViewCell.swift */; };
 		41F70C80207BF35B00B35DD9 /* BathroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */; };
 		CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* AppDelegate.swift */; };
 		CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* ExploreViewController.swift */; };
-		CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD932059985B00A3F17D /* MapViewController.swift */; };
 		CF35AD972059985B00A3F17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD952059985B00A3F17D /* Main.storyboard */; };
 		CF35AD992059985B00A3F17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD982059985B00A3F17D /* Assets.xcassets */; };
 		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
 		CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */; };
 		CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */; };
 		CF9A7370207B34870018B2F7 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A736F207B34870018B2F7 /* Building.swift */; };
-		DB62EBA509C30313272C94A5 /* Pods_CampusAccesible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */; };
 		ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C226E205A2B110095FFC3 /* PathCalculator.swift */; };
 		ED334CFC205A3A960041E564 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334CFB205A3A960041E564 /* Coordinate.swift */; };
 		ED334D01205A3B840041E564 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334D00205A3B840041E564 /* Path.swift */; };
@@ -50,19 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23FDB672713AA4C3F1931630 /* Pods-CampusAccesible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.debug.xcconfig"; sourceTree = "<group>"; };
-		2B7891669572F14664B02150 /* Pods-CampusAccesible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusAccesible.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible.release.xcconfig"; sourceTree = "<group>"; };
 		410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		412385BC2059C9F900A66A8F /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		413F4791205AF8A30075501F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		41ACFF7220923A8000C1B055 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		41ACFF74209241DE00C1B055 /* PExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PExploreTableViewCell.swift; sourceTree = "<group>"; };
 		41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomsViewController.swift; sourceTree = "<group>"; };
-		46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusAccesible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8F2059985B00A3F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF35AD912059985B00A3F17D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
-		CF35AD932059985B00A3F17D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF35AD962059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF35AD982059985B00A3F17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF35AD9B2059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB62EBA509C30313272C94A5 /* Pods_CampusAccesible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,23 +102,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		669DCE29CFA98EFC0A62FBE1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				23FDB672713AA4C3F1931630 /* Pods-CampusAccesible.debug.xcconfig */,
-				2B7891669572F14664B02150 /* Pods-CampusAccesible.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8AC88D69D50636F9916294EF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				46089EEE1235798462B74C7A /* Pods_CampusAccesible.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CF35AD832059985B00A3F17D = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +109,6 @@
 				CF35ADA52059985B00A3F17D /* CampusAccesibleTests */,
 				CF35ADB02059985B00A3F17D /* CampusAccesibleUITests */,
 				CF35AD8D2059985B00A3F17D /* Products */,
-				669DCE29CFA98EFC0A62FBE1 /* Pods */,
-				8AC88D69D50636F9916294EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,8 +184,6 @@
 			children = (
 				41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */,
 				CF35AD912059985B00A3F17D /* ExploreViewController.swift */,
-				CF35AD932059985B00A3F17D /* MapViewController.swift */,
-				412385BC2059C9F900A66A8F /* CreditsViewController.swift */,
 				413F4791205AF8A30075501F /* TableViewController.swift */,
 			);
 			path = Controllers;
@@ -237,12 +207,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF35ADB62059985B00A3F17D /* Build configuration list for PBXNativeTarget "CampusAccesible" */;
 			buildPhases = (
-				9E233C8FCA9B8869D574FA74 /* [CP] Check Pods Manifest.lock */,
 				CF35AD882059985B00A3F17D /* Sources */,
 				CF35AD892059985B00A3F17D /* Frameworks */,
 				CF35AD8A2059985B00A3F17D /* Resources */,
-				6D1E8E9D607B8B8EEC7627CF /* [CP] Embed Pods Frameworks */,
-				729BABB0682307B8ECDE981A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,71 +333,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6D1E8E9D607B8B8EEC7627CF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		729BABB0682307B8ECDE981A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampusAccesible/Pods-CampusAccesible-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E233C8FCA9B8869D574FA74 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CampusAccesible-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CF35AD882059985B00A3F17D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -438,7 +340,6 @@
 			files = (
 				41F70C80207BF35B00B35DD9 /* BathroomsViewController.swift in Sources */,
 				410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */,
-				CF35AD942059985B00A3F17D /* MapViewController.swift in Sources */,
 				41ACFF7320923A8000C1B055 /* ExploreTableViewCell.swift in Sources */,
 				ED334D01205A3B840041E564 /* Path.swift in Sources */,
 				CF9A7370207B34870018B2F7 /* Building.swift in Sources */,
@@ -446,7 +347,6 @@
 				413F4792205AF8A30075501F /* TableViewController.swift in Sources */,
 				ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */,
 				CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */,
-				412385BD2059C9F900A66A8F /* CreditsViewController.swift in Sources */,
 				ED334CFC205A3A960041E564 /* Coordinate.swift in Sources */,
 				41ACFF75209241DE00C1B055 /* PExploreTableViewCell.swift in Sources */,
 			);
@@ -616,13 +516,12 @@
 		};
 		CF35ADB72059985B00A3F17D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23FDB672713AA4C3F1931630 /* Pods-CampusAccesible.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8KYSWYLZ4;
+				DEVELOPMENT_TEAM = 3N6X65VN83;
 				INFOPLIST_FILE = CampusAccesible/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.itesmalumnos.exploraTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,13 +532,12 @@
 		};
 		CF35ADB82059985B00A3F17D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B7891669572F14664B02150 /* Pods-CampusAccesible.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8KYSWYLZ4;
+				DEVELOPMENT_TEAM = 3N6X65VN83;
 				INFOPLIST_FILE = CampusAccesible/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.itesmalumnos.exploraTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";

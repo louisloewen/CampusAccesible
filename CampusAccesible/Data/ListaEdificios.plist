@@ -10,7 +10,7 @@
 		<key>imagen</key>
 		<string>aulas1</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 9pm</string>
 		<key>banos</key>
@@ -54,7 +54,7 @@
 		<key>imagen</key>
 		<string>aulas2</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 9pm</string>
 		<key>banos</key>
@@ -98,7 +98,7 @@
 		<key>imagen</key>
 		<string>aulas3</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 9pm</string>
 		<key>banos</key>
@@ -365,7 +365,7 @@
 		<key>imagen</key>
 		<string>centrales</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>Abierto 24 horas</string>
 		<key>banos</key>
@@ -517,7 +517,7 @@
 		<key>imagen</key>
 		<string>gimnasio</string>
 		<key>elevador</key>
-		<false/>
+		<true/>
 		<key>horario</key>
 		<string>7am - 9pm</string>
 		<key>banos</key>
@@ -607,7 +607,7 @@
 		<key>imagen</key>
 		<string>starbucks</string>
 		<key>horario</key>
-		<string>7am - 10pm</string>
+		<string>7am - 9pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -640,7 +640,7 @@
 		<key>imagen</key>
 		<string>panem</string>
 		<key>horario</key>
-		<string>6:30am - 9:30pm</string>
+		<string>8:00am - 7:00pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
@@ -682,7 +682,7 @@
 	</dict>
 	<dict>
 		<key>show</key>
-		<true/>
+		<false/>
 		<key>nombre</key>
 		<string>Fusion Wok</string>
 		<key>imagen</key>
@@ -762,7 +762,7 @@
 	</dict>
 	<dict>
 		<key>show</key>
-		<true/>
+		<false/>
 		<key>nombre</key>
 		<string>The Food Box</string>
 		<key>imagen</key>
@@ -780,7 +780,7 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>Bancomer</string>
+		<string>BBVA</string>
 		<key>imagen</key>
 		<string>bancomer</string>
 		<key>horario</key>

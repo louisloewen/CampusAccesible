@@ -1,31 +1,28 @@
-//
-//  CustomTableViewCell.swift
-//  CampusAccesible
-//
-//  Created by Arturo González on 4/8/18.
-//  Copyright © 2018 iOS Moviles. All rights reserved.
-//
+// ContentView.swift
+// CampusAccesible
 
-import UIKit
+import SwiftUI
 
-class CustomTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var imgCell: UIImageView!
-    @IBOutlet weak var lbCell: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        imgCell.layer.borderWidth = 0
-        imgCell.layer.masksToBounds = false
-        imgCell.layer.cornerRadius = imgCell.frame.width / 2
-        imgCell.clipsToBounds = true
+struct ContentView: View {
+    @State private var dataService = CampusDataService()
+
+    var body: some View {
+        TabView {
+            Tab("Explora", systemImage: "building.2") {
+                ExploreView()
+            }
+            Tab("Ruta", systemImage: "map") {
+                RouteView()
+            }
+            Tab("Créditos", systemImage: "info.circle") {
+                CreditsView()
+            }
+        }
+        .environment(dataService)
+        .tabBarMinimizeBehavior(.onScrollDown)
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+#Preview {
+    ContentView()
 }

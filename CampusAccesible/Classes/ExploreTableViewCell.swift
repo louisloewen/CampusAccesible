@@ -1,27 +1,50 @@
-//
-//  ExploreTableViewCell.swift
-//  CampusAccesible
-//
-//  Created by Arturo González on 4/26/18.
-//  Copyright © 2018 iOS Moviles. All rights reserved.
-//
+// ExploreView.swift
+// CampusAccesible
 
-import UIKit
+import SwiftUI
 
-class ExploreTableViewCell: UITableViewCell {
+struct ExploreView: View {
+    @Environment(CampusDataService.self) private var dataService
 
-    @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var imgView: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private var sortedBuildings: [Building] {
+        dataService.buildings.values
+            .filter { $0.show }
+            .sorted { $0.name < $1.name }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var body: some View {
+        NavigationStack {
+            List(sortedBuildings) { building in
+                NavigationLink(value: building) {
+                    BuildingListRow(building: building)
+                }
+                .accessibilityLabel(building.name)
+            }
+            .navigationTitle("Explora")
+            .navigationDestination(for: Building.self) { building in
+                BuildingDetailView(building: building)
+            }
+        }
     }
+}
 
+private struct BuildingListRow: View {
+    let building: Building
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(building.imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 44, height: 44)
+                .clipShape(.circle)
+            Text(building.name)
+                .font(.body)
+        }
+    }
+}
+
+#Preview {
+    ExploreView()
+        .environment(CampusDataService())
 }

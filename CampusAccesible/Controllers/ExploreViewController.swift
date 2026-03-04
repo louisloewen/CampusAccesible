@@ -1,102 +1,118 @@
-//
-//  FirstViewController.swift
-//  CampusAccesible
-//
-//  Created by Joao Gabriel Moura De Almeida on 3/14/18.
-//  Copyright © 2018 iOS Moviles. All rights reserved.
-//
+// RouteView.swift
+// CampusAccesible
 
-import UIKit
+import SwiftUI
+import MapKit
 
-class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.landscape
-    }
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
-    @IBOutlet weak var imgBuilding: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
+private let campusCenter = CLLocationCoordinate2D(latitude: 25.6515, longitude: -100.289599)
 
-    
-    var buildingImage : String!
-    var schedule : String!
-    var showElevator : Bool!
-    var elevator : Bool!
-    var bathrooms : NSArray!
-    var buildingName : String!
+struct RouteView: View {
+    @Environment(CampusDataService.self) private var dataService
+    @State private var viewModel = RouteViewModel()
+    @State private var cameraPosition: MapCameraPosition = .camera(
+        MapCamera(centerCoordinate: campusCenter, distance: 1500)
+    )
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imgBuilding.image = UIImage(named: buildingImage)
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        self.title = buildingName
-    }
+    var body: some View {
+        ZStack(alignment: .top) {
+            Map(position: $cameraPosition) {
+                if !viewModel.routeCoordinates.isEmpty {
+                    MapPolyline(coordinates: viewModel.routeCoordinates)
+                        .stroke(
+                            viewModel.isAccessible ? Color.blue : Color.red,
+                            lineWidth: 5
+                        )
+                }
+                if let origin = viewModel.originCoordinate {
+                    Marker("Origen", coordinate: origin)
+                        .tint(.green)
+                }
+                if let destination = viewModel.destinationCoordinate {
+                    Marker("Destino", coordinate: destination)
+                        .tint(.red)
+                }
+                UserAnnotation()
+            }
+            .mapControls {
+                MapUserLocationButton()
+                MapCompass()
+                MapScaleView()
+            }
+            .ignoresSafeArea(edges: .bottom)
+            .onChange(of: viewModel.routeCoordinates) {
+                fitCameraToRoute()
+            }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if showElevator {
-            return 3
+            routeControlsOverlay(vm: viewModel)
         }
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PExploreTableViewCell
-        
-        if indexPath.row == 0 {
-            cell.imgView?.image = #imageLiteral(resourceName: "clock")
-            cell.lbTitle?.text = schedule
-            cell.isUserInteractionEnabled = false
-        } else if indexPath.row == 1 && showElevator {
-            cell.isUserInteractionEnabled = false
-            if elevator {
-                cell.imgView?.image = #imageLiteral(resourceName: "checkmark")
-            } else {
-                cell.imgView?.image = #imageLiteral(resourceName: "cross")
-            }
-            cell.lbTitle?.text = "Elevador"
-        } else {
-            if bathrooms.count > 0 {
-                cell.imgView?.image = #imageLiteral(resourceName: "checkmark")
-                cell.accessoryType = .disclosureIndicator
-            } else {
-                cell.imgView?.image = #imageLiteral(resourceName: "cross")
-            }
-            cell.lbTitle?.text = "Baños"
+        .onAppear {
+            viewModel.configure(with: dataService)
         }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
-            performSegue(withIdentifier: "ShowBathrooms") {
-            }
+        .onChange(of: viewModel.isAccessible) {
+            viewModel.calculateRoute()
         }
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+
+    @ViewBuilder
+    private func routeControlsOverlay(vm: RouteViewModel) -> some View {
+        @Bindable var bvm = vm
+        VStack(spacing: 0) {
+            VStack(spacing: 12) {
+                SuggestionTextField(
+                    placeholder: "Origen",
+                    text: $bvm.originText,
+                    suggestions: vm.originSuggestions(),
+                    onSelect: { vm.selectOrigin($0) }
+                )
+
+                SuggestionTextField(
+                    placeholder: "Destino",
+                    text: $bvm.destinationText,
+                    suggestions: vm.destinationSuggestions(),
+                    onSelect: { vm.selectDestination($0) }
+                )
+
+                HStack {
+                    Label("Ruta accesible", systemImage: "figure.roll")
+                        .font(.subheadline)
+                        .foregroundStyle(.primary)
+                    Spacer()
+                    Toggle("", isOn: $bvm.isAccessible)
+                        .labelsHidden()
+                        .tint(.blue)
+                }
+            }
+            .padding(16)
+            .glassEffect(.regular, in: .rect(cornerRadius: 18))
+            .padding(.horizontal)
+
+            Spacer()
+        }
+        .padding(.top, 60)
     }
-    
-    
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let bathroomsView = segue.destination as! BathroomsViewController
-        
-        bathroomsView.bathrooms = bathrooms as NSArray?
-        bathroomsView.buildingImage = buildingImage as String?
-     }
+
+    private func fitCameraToRoute() {
+        let coords = viewModel.routeCoordinates
+        guard coords.count > 1 else { return }
+        let lats = coords.map { $0.latitude }
+        let lons = coords.map { $0.longitude }
+        guard let minLat = lats.min(), let maxLat = lats.max(),
+              let minLon = lons.min(), let maxLon = lons.max() else { return }
+        let center = CLLocationCoordinate2D(
+            latitude: (minLat + maxLat) / 2,
+            longitude: (minLon + maxLon) / 2
+        )
+        let span = MKCoordinateSpan(
+            latitudeDelta: (maxLat - minLat) * 1.5 + 0.002,
+            longitudeDelta: (maxLon - minLon) * 1.5 + 0.002
+        )
+        withAnimation(.smooth) {
+            cameraPosition = .region(MKCoordinateRegion(center: center, span: span))
+        }
+    }
 }
 
+#Preview {
+    RouteView()
+        .environment(CampusDataService())
+}

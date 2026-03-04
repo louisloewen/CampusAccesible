@@ -1,75 +1,72 @@
-//
-//  BathroomsViewController.swift
-//  CampusAccesible
-//
-//  Created by Arturo González on 4/9/18.
-//  Copyright © 2018 iOS Moviles. All rights reserved.
-//
+// CreditsView.swift
+// CampusAccesible
 
-import UIKit
+import SwiftUI
 
-class BathroomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+struct CreditsView: View {
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 80)
+                        .accessibilityLabel("ExploraTec logo")
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.landscape
-    }
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
-    @IBOutlet weak var imgBuilding: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
-    
-    var bathrooms : NSArray!
-    var buildingImage : String!
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("ExploraTec")
+                            .font(.largeTitle.bold())
+                        Text("Campus Accesible — Tec de Monterrey")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imgBuilding.image = UIImage(named: buildingImage)
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.title = "Baños"
-    }
+                    Divider()
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bathrooms.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExploreTableViewCell
-        let dic = bathrooms[indexPath.row] as! NSDictionary
-        
-        cell.isUserInteractionEnabled = false
-        
-        cell.lbTitle?.text = dic.object(forKey: "nombre") as? String
-        
-        if (dic.object(forKey: "ambulatorio") as? Bool)! {
-            cell.imgView?.image = #imageLiteral(resourceName: "Accessibility")
-            
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Equipo de Desarrollo")
+                            .font(.headline)
+
+                        CreditRow(name: "Joao Gabriel Moura De Almeida", role: "Desarrollo iOS")
+                        CreditRow(name: "Luis Villarreal", role: "Desarrollo iOS")
+                        CreditRow(name: "Arturo González", role: "Desarrollo iOS")
+                    }
+
+                    Divider()
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Tecnologías")
+                            .font(.headline)
+                        Text("SwiftUI · MapKit · GameplayKit")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .navigationTitle("Créditos")
         }
-        
-        return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+}
+
+private struct CreditRow: View {
+    let name: String
+    let role: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(name)
+                .font(.body)
+            Text(role)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .accessibilityElement(children: .combine)
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+#Preview {
+    CreditsView()
 }
