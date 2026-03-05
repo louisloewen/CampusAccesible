@@ -833,5 +833,37 @@
 			<integer>150</integer>
 		</array>
 	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>CEDES</string>
+		<key>imagen</key>
+		<string>cedes</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 9pm</string>
+		<key>banos</key>
+		<array>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>154</integer>
+			<integer>155</integer>
+		</array>
+	</dict>
 </array>
 </plist>

@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */; };
-		413F4792205AF8A30075501F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F4791205AF8A30075501F /* TableViewController.swift */; };
-		41ACFF7320923A8000C1B055 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF7220923A8000C1B055 /* ExploreTableViewCell.swift */; };
-		41ACFF75209241DE00C1B055 /* PExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF74209241DE00C1B055 /* PExploreTableViewCell.swift */; };
-		41F70C80207BF35B00B35DD9 /* BathroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */; };
-		CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* AppDelegate.swift */; };
-		CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* ExploreViewController.swift */; };
+		410AF8CF207AFA1800356F70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410AF8CE207AFA1800356F70 /* ContentView.swift */; };
+		413F4792205AF8A30075501F /* BuildingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F4791205AF8A30075501F /* BuildingDetailView.swift */; };
+		41ACFF7320923A8000C1B055 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF7220923A8000C1B055 /* ExploreView.swift */; };
+		41ACFF75209241DE00C1B055 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF74209241DE00C1B055 /* RouteViewModel.swift */; };
+		41F70C80207BF35B00B35DD9 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F70C7F207BF35B00B35DD9 /* CreditsView.swift */; };
+		CF35AD902059985B00A3F17D /* CampusAccesibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* CampusAccesibleApp.swift */; };
+		CF35AD922059985B00A3F17D /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* RouteView.swift */; };
 		CF35AD972059985B00A3F17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD952059985B00A3F17D /* Main.storyboard */; };
 		CF35AD992059985B00A3F17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD982059985B00A3F17D /* Assets.xcassets */; };
 		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
 		CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */; };
 		CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */; };
 		CF9A7370207B34870018B2F7 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A736F207B34870018B2F7 /* Building.swift */; };
-		ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C226E205A2B110095FFC3 /* PathCalculator.swift */; };
-		ED334CFC205A3A960041E564 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334CFB205A3A960041E564 /* Coordinate.swift */; };
-		ED334D01205A3B840041E564 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334D00205A3B840041E564 /* Path.swift */; };
+		ED1C226F205A2B110095FFC3 /* PathfindingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C226E205A2B110095FFC3 /* PathfindingService.swift */; };
+		ED334CFC205A3A960041E564 /* CampusCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334CFB205A3A960041E564 /* CampusCoordinate.swift */; };
+		ED334D01205A3B840041E564 /* CampusDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334D00205A3B840041E564 /* CampusDataService.swift */; };
 		EDEA495F205A01FE004485C4 /* ListaCaminos.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA495E205A01FE004485C4 /* ListaCaminos.plist */; };
 		EDEA4963205A020E004485C4 /* ListaEdificios.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA4962205A020E004485C4 /* ListaEdificios.plist */; };
 		EDEA4965205A0216004485C4 /* PuntosClave.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDEA4964205A0216004485C4 /* PuntosClave.plist */; };
@@ -47,14 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		413F4791205AF8A30075501F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		41ACFF7220923A8000C1B055 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
-		41ACFF74209241DE00C1B055 /* PExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PExploreTableViewCell.swift; sourceTree = "<group>"; };
-		41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomsViewController.swift; sourceTree = "<group>"; };
+		410AF8CE207AFA1800356F70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		413F4791205AF8A30075501F /* BuildingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailView.swift; sourceTree = "<group>"; };
+		41ACFF7220923A8000C1B055 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		41ACFF74209241DE00C1B055 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
+		41F70C7F207BF35B00B35DD9 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF35AD8F2059985B00A3F17D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF35AD912059985B00A3F17D /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		CF35AD8F2059985B00A3F17D /* CampusAccesibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusAccesibleApp.swift; sourceTree = "<group>"; };
+		CF35AD912059985B00A3F17D /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		CF35AD962059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF35AD982059985B00A3F17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF35AD9B2059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,9 +68,9 @@
 		CF9A736F207B34870018B2F7 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		CFB2D1A72090FFA600378A14 /* centroEstudiantil.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = centroEstudiantil.gpx; sourceTree = "<group>"; };
 		CFB2D1A82090FFA700378A14 /* biblio.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = biblio.gpx; sourceTree = "<group>"; };
-		ED1C226E205A2B110095FFC3 /* PathCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculator.swift; sourceTree = "<group>"; };
-		ED334CFB205A3A960041E564 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
-		ED334D00205A3B840041E564 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		ED1C226E205A2B110095FFC3 /* PathfindingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfindingService.swift; sourceTree = "<group>"; };
+		ED334CFB205A3A960041E564 /* CampusCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusCoordinate.swift; sourceTree = "<group>"; };
+		ED334D00205A3B840041E564 /* CampusDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusDataService.swift; sourceTree = "<group>"; };
 		EDEA495E205A01FE004485C4 /* ListaCaminos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaCaminos.plist; sourceTree = "<group>"; };
 		EDEA4962205A020E004485C4 /* ListaEdificios.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListaEdificios.plist; sourceTree = "<group>"; };
 		EDEA4964205A0216004485C4 /* PuntosClave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PuntosClave.plist; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				ED334CFF205A3B4D0041E564 /* Data */,
 				ED334CFE205A3B2D0041E564 /* Controllers */,
 				ED334CFD205A3B130041E564 /* Classes */,
-				CF35AD8F2059985B00A3F17D /* AppDelegate.swift */,
+				CF35AD8F2059985B00A3F17D /* CampusAccesibleApp.swift */,
 				CF35AD952059985B00A3F17D /* Main.storyboard */,
 				CF35AD982059985B00A3F17D /* Assets.xcassets */,
 				CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */,
@@ -168,13 +168,13 @@
 		ED334CFD205A3B130041E564 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ED334CFB205A3A960041E564 /* Coordinate.swift */,
-				ED1C226E205A2B110095FFC3 /* PathCalculator.swift */,
-				ED334D00205A3B840041E564 /* Path.swift */,
+				ED334CFB205A3A960041E564 /* CampusCoordinate.swift */,
+				ED1C226E205A2B110095FFC3 /* PathfindingService.swift */,
+				ED334D00205A3B840041E564 /* CampusDataService.swift */,
 				CF9A736F207B34870018B2F7 /* Building.swift */,
-				41ACFF7220923A8000C1B055 /* ExploreTableViewCell.swift */,
-				41ACFF74209241DE00C1B055 /* PExploreTableViewCell.swift */,
-				410AF8CE207AFA1800356F70 /* CustomTableViewCell.swift */,
+				41ACFF7220923A8000C1B055 /* ExploreView.swift */,
+				41ACFF74209241DE00C1B055 /* RouteViewModel.swift */,
+				410AF8CE207AFA1800356F70 /* ContentView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 		ED334CFE205A3B2D0041E564 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				41F70C7F207BF35B00B35DD9 /* BathroomsViewController.swift */,
-				CF35AD912059985B00A3F17D /* ExploreViewController.swift */,
-				413F4791205AF8A30075501F /* TableViewController.swift */,
+				41F70C7F207BF35B00B35DD9 /* CreditsView.swift */,
+				CF35AD912059985B00A3F17D /* RouteView.swift */,
+				413F4791205AF8A30075501F /* BuildingDetailView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -338,17 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41F70C80207BF35B00B35DD9 /* BathroomsViewController.swift in Sources */,
-				410AF8CF207AFA1800356F70 /* CustomTableViewCell.swift in Sources */,
-				41ACFF7320923A8000C1B055 /* ExploreTableViewCell.swift in Sources */,
-				ED334D01205A3B840041E564 /* Path.swift in Sources */,
+				41F70C80207BF35B00B35DD9 /* CreditsView.swift in Sources */,
+				410AF8CF207AFA1800356F70 /* ContentView.swift in Sources */,
+				41ACFF7320923A8000C1B055 /* ExploreView.swift in Sources */,
+				ED334D01205A3B840041E564 /* CampusDataService.swift in Sources */,
 				CF9A7370207B34870018B2F7 /* Building.swift in Sources */,
-				CF35AD902059985B00A3F17D /* AppDelegate.swift in Sources */,
-				413F4792205AF8A30075501F /* TableViewController.swift in Sources */,
-				ED1C226F205A2B110095FFC3 /* PathCalculator.swift in Sources */,
-				CF35AD922059985B00A3F17D /* ExploreViewController.swift in Sources */,
-				ED334CFC205A3A960041E564 /* Coordinate.swift in Sources */,
-				41ACFF75209241DE00C1B055 /* PExploreTableViewCell.swift in Sources */,
+				CF35AD902059985B00A3F17D /* CampusAccesibleApp.swift in Sources */,
+				413F4792205AF8A30075501F /* BuildingDetailView.swift in Sources */,
+				ED1C226F205A2B110095FFC3 /* PathfindingService.swift in Sources */,
+				CF35AD922059985B00A3F17D /* RouteView.swift in Sources */,
+				ED334CFC205A3A960041E564 /* CampusCoordinate.swift in Sources */,
+				41ACFF75209241DE00C1B055 /* RouteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
